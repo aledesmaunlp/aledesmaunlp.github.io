@@ -1,0 +1,193 @@
+/*google fonts: hay enlace para aplicar tipografias en html*/
+/*https://fonts.google.com/ */
+/*En el CSS lo primero que se pone es el @import, luego el selector universal para resetear margen y rellenos*/
+
+/*hay elementos que tienen margen y rellenos y en cada buscador se ve distinto. Reseteo el margen y luego yo lo coloco. Con el padding pasa lo mismo. Tambien box-sizing: border-box*. Todo para reseteo*/
+
+/*hicimos dos header y dos en footer divididos por "display: flex; justify-content: space between;" CLAVE CLAVE*/
+
+/*existen los code beautyfyers vsc marketplace extensiones*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,900&display=swap');
+
+/*Internet explorer 2px de padding, en el resto 1px : Importante*/
+
+/*Padding separacion hacia adentro, marging separacion hacia afuera*/
+
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: 'Roboto', sans-serif;
+    /*Esto es un hack hecho para resolver incompatibilidades*/
+    font-weight: 500;
+    /*regular = normal = 400, si la usas no declaras f-w */
+    color: rgb(132, 180, 223);
+    font-size: 18px ;
+}
+
+/*header*/
+
+header {
+
+    /*Sobre la imagen : px simpre pegado al numero*/
+    width: 1100px; 
+    margin: auto;
+    height: 70px;
+
+    /*Para centrar caja*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    font-weight: 600;
+    color: rgb(132, 180, 223);
+}
+
+header a img {
+
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 16px;
+}
+
+nav a{
+    margin: 14px; 
+    /*28 total pero son 14 a cada lado, no usa magin eneste caso, es separacion hacia afuera de una caja pero el area de click se reduce, uno usa padding que es separacion hacia adentro de la caja*/
+}
+
+/*contenido central=maiin*/
+
+main{
+    min-height: 600px;
+    padding-bottom: 200px;
+}
+/*seccion index*/
+/*pongol a imagende fondo con texto arriba por eso no va a html*/
+    #heroIndex{
+        height: 450px;
+        background-image: url(../imagenes/hero.jpg);
+        background-repeat: no-repeat;
+        /*mata el mosaico*/
+        background-size: cover;
+        background-position: 0 -130px;
+        /* numero  x y numero y . -130px es qeu lo saco ese valor fuera de la caja*/
+        color: black;
+        display: flex;
+        /*sin display flex no se habilita flex*/
+        align-items: center;
+    }
+    #h1_hero {
+        width: 1100px;
+        margin: auto;
+        color: rgb(36, 34, 31);
+    }
+        #h1_hero h1 {
+            color: rgb(233, 166, 142);
+            font-size: 48px;
+            width: 240px;
+        }
+        #h1_hero p{
+            width: 330px;
+        }
+    h2 {
+        color: rgb(230, 162, 62);
+        text-align: center;
+        /*otra opcion es centrar la caja pero habria que poner un anchio muy chico para centrarlo*/
+        padding-top: 60px;
+    }
+
+    #parrafoletsgo {
+        width: 900px;
+        text-align: center;
+        margin: auto;
+        padding-top: 30px;
+        /*Margin =/= padding , ver*/
+        color: black;
+    }
+
+    /*Articulos index*/ /*recordar qeu a un id en html corresponde un # css*/
+
+    #articulos_index {
+        width: 1100px;
+        margin: auto;
+        display: flex; /*para que se equiparen al lado uno del otro*/
+        justify-content: space-between;
+    }
+        #articulos_index article {
+            width: 339px;
+            color:rgb(78, 146, 206)
+
+        }
+
+
+
+
+/*footer*/
+footer {
+
+    height: 160px ;
+    background-color: rgb(132, 180, 223);
+    position: fixed;
+    bottom: 0px;
+    width: 100% ;
+
+}
+
+    #contenidoFooter {
+        
+        width: 1100px;
+        margin: auto;
+
+        display: flex;
+        justify-content: space-between;
+
+        color: rgb(255, 255, 255);
+        /*background-color: rgb(12, 65, 65);*/
+        align-items: center;
+    }
+
+    #redes img {
+        width: 20px;
+        height: 20px; /*esto lo puse yo*/
+        margin-right: 12px;
+    }
+ 
+    /*Listas son 3 UL con varios LI donde el 1° LI esta en negrita*/
+
+    #listas {
+        display: flex; /*Ordena uno al lado del otro*/  
+    }
+        #listas ul{
+            margin-left: 50px ;
+        }
+
+        /*esto aplica sobre el class*/
+
+        .tituloLista {
+            margin-bottom: 12px;
+            padding-top: 12px;
+            font-weight: 600px;
+        }
+
+
+        #listas li{
+            list-style-type: none; /*quita el bullet*/
+            margin-left: 50px;
+            margin-top: 5px;
+        }
+
+
+
+/*genericos*/
+a {
+    text-decoration: none;
+}
+
